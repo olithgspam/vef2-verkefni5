@@ -1,0 +1,65 @@
+$gold: #71c5e1;
+$gold-light: #fbbf24;
+$gold-dark: #d97706;
+$black: #000000;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $black;
+  color: #ededed;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+.main-bg {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, $black 40%, $gold 50%, $black 60%);
+  background-size: 400% 400%;
+  animation: warp-liquid 35s ease-in-out infinite alternate;
+  padding: 2rem;
+}
+
+@keyframes warp-liquid {
+  0% { background-position: 0% 0%; background-size: 100% 100%; }
+  25% { background-position: 100% 50%; background-size: 350% 250%; }
+  50% { background-position: 100% 100%; background-size: 100% 100%; }
+  100% { background-position: 0% 0%; background-size: 100% 100%; }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.article-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($gold, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  h2 {
+    color: white;
+    margin: 0 0 1rem 0;
+  }
+
+  .gold-line {
+    height: 4px;
+    width: 60px;
+    background: $gold;
+    border-radius: 2px;
+    margin-top: 1rem;
+  }
+}
