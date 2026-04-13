@@ -23,7 +23,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className="main-bg">
       <div className="container" style={{ paddingTop: '5rem' }}>
-        <Link href="/" style={{ color: '#f59e0b', fontWeight: 'bold', textDecoration: 'none' }}>
+        <Link href="/" style={{ color: '#2dd7e0', fontWeight: 'bold', textDecoration: 'none' }}>
           &larr; Til baka
         </Link>
         <h1 style={{ fontSize: '4rem', marginTop: '2rem' }}>{data.article.title}</h1>
