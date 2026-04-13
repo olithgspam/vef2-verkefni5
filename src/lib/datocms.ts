@@ -2,7 +2,7 @@ export async function performRequest({ query, variables = {} }: { query: string,
   const res = await fetch("https://graphql.datocms.com/", {
     method: "POST",
     headers: {
-      Authorization: `Bearer f82fb613797b6f56d230aa81700c1c`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_API_TOKEN}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query, variables }),
